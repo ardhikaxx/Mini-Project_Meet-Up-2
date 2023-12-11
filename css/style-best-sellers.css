@@ -1,0 +1,236 @@
+.product {
+    margin: 10px;
+}
+
+.product img {
+    border-radius: 10px;
+}
+
+.rating {
+    margin-top: -30px;
+}
+
+.best-sellers .description {
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: var(--color-main);
+}
+
+.best-sellers>.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    padding: 1.5rem 2rem;
+}
+
+.best-sellers>.description h2 {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.best-sellers>.description p {
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.best-sellers ul {
+    display: flex;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 2rem;
+}
+
+.best-sellers ul::-webkit-scrollbar {
+    display: none;
+}
+
+.best-sellers ul li {
+    scroll-snap-align: start;
+    min-width: 300px;
+}
+
+.best-sellers ul li article img {
+    width: 100%;
+}
+
+.best-sellers ul li article .description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+}
+
+.best-sellers ul li:not(:first-child) article .description {
+    border-left: 0.5px solid var(--color-gray);
+}
+
+.best-sellers ul li:not(:last-child) article .description {
+    border-right: 0.5px solid var(--color-gray);
+}
+
+.best-sellers ul li article .description h3 {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.button {
+    position: relative;
+    width: 156px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #34974d;
+    background-color: #3aa856;
+}
+
+.button,
+.button__icon,
+.button__text {
+    transition: all 0.3s;
+}
+
+.button .button__text {
+    transform: translateX(10px);
+    color: #fff;
+    font-weight: 600;
+}
+
+.button .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 40px;
+    background-color: #34974d;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button .svg {
+    width: 30px;
+    stroke: #fff;
+}
+
+.button:hover {
+    background: #34974d;
+}
+
+.button:hover .button__text {
+    color: transparent;
+}
+
+.button:hover .button__icon {
+    width: 148px;
+    transform: translateX(0);
+}
+
+.button:active .button__icon {
+    background-color: #2e8644;
+}
+
+.button:active {
+    border: 1px solid #2e8644;
+}
+
+.con-like {
+    --red: rgb(255, 50, 50);
+    margin-left: 210px;
+    position: relative;
+    width: 25px;
+    height: 25px;
+}
+
+.con-like .like {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.con-like .checkmark {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.con-like .outline,
+.con-like .filled {
+    fill: var(--red);
+    position: absolute;
+}
+
+.con-like .filled {
+    animation: kfr-filled 0.5s;
+    display: none;
+}
+
+.con-like .celebrate {
+    position: absolute;
+    animation: kfr-celebrate 0.5s;
+    animation-fill-mode: forwards;
+    display: none;
+}
+
+.con-like .poly {
+    stroke: var(--red);
+    fill: var(--red);
+}
+
+.con-like .like:checked~.checkmark .filled {
+    display: block
+}
+
+.con-like .like:checked~.checkmark .celebrate {
+    display: block
+}
+
+@keyframes kfr-filled {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes kfr-celebrate {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .best-sellers>.description p {
+        font-size: 3rem;
+        max-width: 46rem;
+    }
+
+    .best-sellers ul li {
+        width: 25%;
+    }
+}
