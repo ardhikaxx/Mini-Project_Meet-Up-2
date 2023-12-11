@@ -27,13 +27,28 @@
 }
 
 .best-sellers>.description h2 {
-    font-weight: 400;
-    font-size: 1rem;
+    font-weight: 700;
 }
 
 .best-sellers>.description p {
-    font-size: 2rem;
+    font-size: 2px;
     font-weight: 100;
+}
+
+.paragraf p {
+    font-size: 1px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.rating i {
+    font-weight: 600;
+    margin-left: 5px;
+    color: #333;
+    font-size: 13px;
 }
 
 .best-sellers ul {
@@ -74,8 +89,8 @@
 }
 
 .best-sellers ul li article .description h3 {
-    font-weight: 400;
-    font-size: 1.5rem;
+    font-weight: 600;
+    font-size: 16px;
 }
 
 .button {
@@ -98,13 +113,14 @@
 
 .button .button__text {
     transform: translateX(10px);
+    font-size: 14px;
     color: #fff;
     font-weight: 600;
 }
 
 .button .button__icon {
     position: absolute;
-    transform: translateX(109px);
+    transform: translateX(115px);
     height: 100%;
     width: 40px;
     background-color: #34974d;
@@ -144,8 +160,8 @@
     --red: rgb(255, 50, 50);
     margin-left: 210px;
     position: relative;
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
 }
 
 .con-like .like {

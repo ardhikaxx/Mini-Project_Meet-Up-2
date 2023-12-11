@@ -1,6 +1,6 @@
 header {
-    background-color: var(--color-main);
-    color: var(--color-gray);
+    background-color: #000000;
+    color: #fff;
     height: 4rem;
     position: sticky;
     top: 0;
@@ -15,8 +15,9 @@ header .container {
     font-family: "Poppins", sans-serif;
 }
 
-header h1 {
-    font-size: 3rem;
+header img {
+    padding: 20px;
+    width: 180px;
     text-decoration: none;
 }
 
@@ -26,10 +27,10 @@ header nav {
 }
 
 header nav button {
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    background-color: #D0011B;
     border: none;
-    color: var(--color-gray);
+    color: #fff;
     width: 40px;
     height: 40px;
     display: flex;
@@ -41,7 +42,7 @@ header nav ul {
     position: absolute;
     top: 4rem;
     right: -100%;
-    width: 250px;
+    width: 180px;
     padding: 1rem 0;
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
@@ -62,4 +63,13 @@ header nav ul:focus-within {
 header nav ul li {
     padding: 0.5rem 16px;
     font-size: 1.5rem;
+    color: #9C9C9C;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li:hover {
+    font-weight: 600;
+    color: #ffffff;
 }
